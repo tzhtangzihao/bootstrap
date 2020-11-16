@@ -108,6 +108,8 @@
     return null;
   };
 
+  var isRTL = document.documentElement.dir === 'rtl';
+
   var onDOMContentLoaded = function onDOMContentLoaded(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback);
