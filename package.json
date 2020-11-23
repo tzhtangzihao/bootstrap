@@ -23,6 +23,7 @@
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
     "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+    "css-rtl-examples": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js \"site/content/**/examples/{blog,carousel,dashboard,cheatsheet}/*.css\" --dir \"site/content/docs/**/examples/\" --ext \".rtl.css\" --base \"site/content/docs/**/examples/\"",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
     "css-lint-vars": "fusv scss/ site/assets/scss/",
